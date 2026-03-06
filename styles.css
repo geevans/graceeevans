@@ -1,1 +1,49 @@
 /* css styles */
+
+.my-bubble {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #dee2e6;
+  }
+
+  .linkedin-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 560px;
+    margin: 2rem auto;
+  }
+  
+  .carousel-track-container {
+    overflow: hidden;  /* THIS is what prevents all slides showing at once */
+    width: 504px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+  
+  .carousel-slide {
+    min-width: 504px;
+  }
+  
+  .carousel-btn {
+    background: none;
+    border: 2px solid #0a66c2;
+    color: #0a66c2;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  
+  .carousel-btn:hover {
+    background: #0a66c2;
+    color: white;
+  }
