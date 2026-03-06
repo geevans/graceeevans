@@ -1,8 +1,8 @@
 ---
-title: "Welcome to my page!"
+title: "Hi! I'm Grace Evans."
 about: 
     template: jolla
-    image: "headshot.JPG"
+    image: "croppedheadshot.jpg"
     links:
     - icon: linkedin
       href: https://www.linkedin.com/in/graceeevans5/
@@ -10,9 +10,5 @@ about:
       href: https://www.instagram.com/grace3vans/ 
 ---
 
-## About Me
-My name is Grace Evans and I am an International Relations major with a Data Science minor at the **College of William & Mary**. I am passionate about the intersection of digital technology and global governance, particularly how Generative AI can be leveraged to enhance outcomes for underserved populations.
-
-I currently serve as a Research Assistant at the **Digital Inclusion & Governance Lab**.
-
+Welcome to my personal page -- I'm glad you're here! This site is meant to provide a concise (but far from complete!) overview of who I am, where I've been, and what I'm passionate about. To learn more about me click [here](about_me.qmd).
 

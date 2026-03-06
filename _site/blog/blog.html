@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-21">
-<meta name="description" content="An introduction to my expensive, yet purpose-giving addiction">
 
-<title>My Chronic Disorder: Dromomania – Grace E. Evans</title>
+<title>Blog – Grace E. Evans</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a1c87f40015067c62c82f3c4ff3d1ad4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a1c87f40015067c62c82f3c4ff3d1ad4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,9 +70,67 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../styles.css">
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -82,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Grace E. Evans</span>
     </a>
   </div>
@@ -93,23 +151,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about_me.html"> 
+    <a class="nav-link" href="../about_me.qmd"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resume.html"> 
+    <a class="nav-link" href="../resume.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html"> 
+    <a class="nav-link" href="../blog.qmd"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../contact.html"> 
+    <a class="nav-link" href="../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -131,25 +189,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">My Chronic Disorder: Dromomania</h1>
+<h1 class="title">Blog</h1>
 </div>
 
-<div>
-  <div class="description">
-    An introduction to my expensive, yet purpose-giving addiction
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 21, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -159,53 +206,27 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>Hi! My name’s Grace and this is my travel blog.</strong></p>
-<p>Ever since I can remember, I’ve always had a fervent love for travel. Whether it was my upbringing in a family that was constantly seeking out new destinations, or a passion I picked up on my own, I have always found traveling to be the most envigorating experience. So when I stumbled upon a word that seemed tailor-made to describe my, let’s say, <em>enthusiastic</em> relationship with exploring the world, I knew I had found my first blog topic – or at least my diagnosis.</p>
-<p><strong>What is dromomania?</strong></p>
-<p>The American Psychological Association Dictionary defines dromomania as: <em>“an abnormal drive or desire to travel that involves spending beyond one’s means and sacrificing job, partner, or security in the lust for new experiences. People with dromomania not only feel more alive when traveling but also start planning their next trip as soon as they arrive home. Fantasies about travel occupy many of their waking thoughts and some of their dreams. The condition was formerly referred to as vagabond neurosis.”</em></p>
-<p><strong>Where it all started…</strong></p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="fountainsabbey.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Traversing the Ruins of Fountains Abbey, England</figcaption>
-</figure>
+<div id="blog-posts">
+
 </div>
-<p>When I was 6 years old, my parents uprooted our calm, quaint life in Western Pennsylvania, and moved our family to the Netherlands. After settling down, we took our first family trip to England, where I tried my first sausage roll and began showing early symptoms of dromomania. I vividly remember my favorite part of our stay: a day trip to Fountains Abbey – a slightly dilapidated, but remarkably beautiful monastery from the 12th century. As I reflect on my childhood travels now, I am able to appreciate how immensely privileged I was to have picturesque, educative European sites as my playground.</p>
-<p>Since this first big trip, I’ve become obsessed with traveling in all of its surprsing detours, awe-inspiring locations, and collectable passport stamps. Whenever I’m on a trip, I feel most like myself, as the creative, spontaneous sides of me burst from their confines and look for every chance to maximize the experience of being in entirely uncharted territory. The moment I touch down in my familiar home airport (and reality), my mind immediately begins plotting my next trip, as if I hadn’t just been somewhere new. While this might sound like ingratitude, I can assure you that I am unexplicably grateful for every travel experience I’ve been lucky to have. To express this gratitude, I’ve put together a few of my favorite trips and hope to use this blog as a tribute to the people they’ve introduced me to, the lessons they’ve taught me, and the pretty cool pictures they’ve given me.</p>
-<p><strong>Where it’s taken me…</strong></p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="mtadams.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Climbing Mt. Adams in Washington State</figcaption>
-</figure>
-</div>
-<p>One of my most memorable trips was to Washington State, where my Dad and I embarked on a 3-day climb up Mt. Adams. We were with an organization that has impressively actuated its incredible founding mission: raising money for breast cancer and multiple sclerosis research. After three brutal days of freeze-dried meals, sunburn, and intense wind chill, we finally summitted the mountain. The next day, I came down with sore legs, 10 new lifelong friends, and an overwhelming appreciation for my good health, which allowed me to have this transformative experience.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="lakeatitlan.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Boating in Lake Atitlan, Guatemala</figcaption>
-</figure>
-</div>
-<p>Unlike the previous, my next trip took me southbound, to Lake Atitlan, Guatemala. The lakes I was used to, as a girl from rural Pittsburgh suburbs, certainly did not prepare me for the remarkable natural wonder that is Lake Atitlan. I was lucky to meet someone who owned a boat-tour business and got to see the three hulking volcanoes – Atitlan, Toliman, and San Pedro – as well as the surrounding lake towns, from the water viewpoint. This outing will forever be one of my favorites and one that my mind wanders to whenever my travel itch starts to flare up.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="cr_one.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Photographing Volano Arenal, Costa Rica</figcaption>
-</figure>
-</div>
-<p>My run-in with the breathtaking volcanoes of Guatemala clearly wasn’t enough to satiate my craving for explosive natural wonders, as I soon planned a trip to Nuevo Arenal, Costa Rica. Here, I was able to hike around the base of Volcan Arenal, taking in the beautiful scenes around me and the (slightly) rattling screams of howler monkeys. While the topography was enough to leave a major impression on me, what really stuck was the appreciative, relaxed outlook of the Costa Rican people. Every individual I had the pleasure of interacting with had a genuine heart for others and a desire to welcome people from all walks of life. I hope to learn and embody this wherever I go – both on my travels and at my home base.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="uruguay.jpg" class="img-fluid figure-img" style="width:70.0%"></p>
-<figcaption>Exploring Colonia del Sacramento, Uruguay</figcaption>
-</figure>
-</div>
-<p>Last, but certainly not least, was my trip to Colonia del Sacramento in Uruguay. The moment I entered the coastal town, I knew my 5 AM wakeup for the 6 AM ferry from Argentina had been worth it. I was stunned at how quickly I was able to travel from the Europe-esque metropolis of Buenos Aires to the quiet oasis of Colonia del Sacramento. The village was brimming with history, Portuguese-influence, and kind people, making it a trip I certainly will never forget.</p>
-<p>If there’s one thing these four trips have taught me, it’s that the world is much more generous than we give it credit for. From the ruins of Fountains Abbey to the sunny shores of Colonia del Sacramento, each place has given me something unique, whether that be a lesson, a friendship, a perspective, or a momentary breath of fresh air from the chaotic world we live in. On the basis of this understanding I’ve reached a conclusion. Although dromomania may technically be a diagnosis, I can’t say I’m in a big rush to find a cure because without it, I likely wouldn’t have gotten to experience any of these places. I can assure you I’ll stay “sick” with dromomania and you, stay tuned!</p>
+<hr>
+<iframe src="linkedin-carousel.html" width="100%" height="420" style="border: none;" loading="lazy" title="LinkedIn Posts"></iframe>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

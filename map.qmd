@@ -1,0 +1,20 @@
+```python
+---
+title: "My Interactive Map"
+---
+
+```{python}
+#| echo: false
+import folium
+
+# Create the map centered at a specific location
+m = folium.Map(location=[40.7484, -73.9857], zoom_start=15)
+
+# Add a marker with a popup
+folium.Marker(
+    [40.7484, -73.9857], 
+    popup="<b>Empire State Building</b><br>Clickable text here!",
+    tooltip="Click me!"
+).add_to(m)
+
+m

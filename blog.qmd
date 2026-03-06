@@ -1,7 +1,150 @@
 ---
 title: "Blog"
-listing: 
-    contents: posts
-    type: default
-    sort: "date desc"
+listing:
+  id: blog-posts
+  contents: posts
+  type: grid
+  sort:
+    - "date"
+    - "title"
+  sort-ui: true
+  filter-ui: true
 ---
+::: {#blog-posts}
+:::
+
+## My LinkedIn Posts
+```{=html}
+<style>
+  .linkedin-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+
+  .carousel-btn {
+    flex-shrink: 0;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    color: #334155;
+  }
+
+  .carousel-btn:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+  }
+
+  .carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease;
+  }
+
+  .carousel-slide {
+    min-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: #fff;
+  }
+
+  .carousel-slide iframe {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .dot.active {
+    background: #334155;
+  }
+</style>
+
+<div class="linkedin-carousel-wrapper">
+  <button class="carousel-btn" onclick="moveCarousel(-1)">&#8249;</button>
+
+  <div style="width: 100%">
+    <div class="carousel-track-container">
+      <div class="carousel-track" id="linkedinTrack">
+
+        <!-- NEWEST first -->
+        <div class="carousel-slide">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7384206458931879936?collapsed=1" height="570" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="carousel-slide">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7233860304227516416?collapsed=1" height="570" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!-- OLDEST last -->
+        <div class="carousel-slide">
+          <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7231143663710486528?collapsed=1" height="570" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="carousel-dots" id="carouselDots"></div>
+  </div>
+
+  <button class="carousel-btn" onclick="moveCarousel(1)">&#8250;</button>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const track = document.getElementById('linkedinTrack');
+  const slides = track.querySelectorAll('.carousel-slide');
+  const dotsContainer = document.getElementById('carouselDots');
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+  });
+
+  function goToSlide(index) {
+    currentSlide = index;
+    track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+    document.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === currentSlide);
+    });
+  }
+
+  function moveCarousel(direction) {
+    goToSlide((currentSlide + direction + slides.length) % slides.length);
+  }
+</script>
+```

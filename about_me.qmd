@@ -1,0 +1,31 @@
+---
+title: "About Me"
+description: "My Five W's"
+---
+
+### Who?
+I am currently an undergraduate at the College of William & Mary studying International Relations with a minor in Data Science, with an accepted spot in a Master's in Business Analytics program. I am additionally a researcher, educator, curriculum designer, and community builder — equally at home analyzing policy data, teaching English abroad, or moderating an AI ethics panel.
+
+### What?
+I work at the intersection of technology, education, and social justice, conducting research on digital governance and AI policy, developing K-12 digital literacy curricula, archiving human rights records, and building cross-cultural programs that connect communities. I also tutor Spanish, manage digital communications for nonprofits, and mentor students in international relations as a department ambassador.
+
+### Why?
+I am motivated by the belief that technology and education, when deployed responsibly, can advance equity and human dignity across borders. I am passionate about ensuring that marginalized communities have a voice in how emerging technologies are governed — and that young people are equipped with the skills and global perspective to navigate an increasingly complex digital world.
+
+### When? 
+My journey began with a legal internship in 2022 and has since accelerated through a series of impactful roles. From founding a cross-cultural pen-pal program in 2021, to interning in Costa Rica and Argentina in 2024–2025, to my ongoing research role at W&M's Digital Inclusion & Governance Lab, I am currently in  junior year (graduating May 2026), with graduate school to follow in 2026–2027.
+
+::: {.my-bubble}
+### Where?
+Some places I've lived...
+```{=html}
+<iframe
+  src="interactive_map.html"
+  width="100%"
+  height="580"
+  style="border: none; border-radius: 12px;"
+  loading="lazy"
+  title="Interactive Places Map"
+></iframe>
+```
+:::
